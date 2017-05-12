@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Infy Online Gourmet Shop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<div> <img src="http://placehold.it/650x150"></div>
+		<div class="text-center" id="header"><h1>Infy Online Gourmet Shop</h1></div>
+		<hr>
+			<div class="row text-center">
+			<h1> Welcome to Infy Gourmet</h1>
+			<hr>
+			<div class="row underline">
+			<h2> Today's Special</h2>
+			</div>
+			<br>
+			<div id= "myOption"></div>
+			<div id = "order"></div>
+
+	<footer>Infosys Limited &#169 2017</footer>
+</div>
+</body>
+	<script type="text/javascript">
+				var options=["Idly","Dosa","Upma", "Poha", "Pongal"];
+				num=1;
+				output="";
+				for (var i in options){
+					output+= num+". "+options[i]+"<br>";
+					num+=1;
+
+				}
+				document.getElementById("myOption").innerHTML=output;
+				var order = prompt("Please enter the item");
+				if (order!= null){
+
+					var confirm= confirm("if the item ordered is " +options[order-1]+" press ok");
+					if (confirm==true){
+						alert("Oder Placed Successfully!!");
+					}
+					else{
+						s="Order placement not complete";
+					}
+				}
+				else{
+					s="Order placement not complete";
+				}
+
+				document.getElementById("order").innerHTML=s;
+			</script>
+</html>
